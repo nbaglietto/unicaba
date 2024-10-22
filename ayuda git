@@ -83,3 +83,93 @@ Realizar commits con descripciones claras cada vez que hagas cambios.
 Trabajar en equipo, descargando y subiendo cambios frecuentemente para evitar conflictos.
 Considerar ramas para trabajo paralelo si el equipo es grande.
 Si tienes dudas adicionales o necesitas un detalle más específico en alguno de los pasos, ¡házmelo saber!
+--------------------------
+1. Configurar GitHub para Colaboración en Equipo
+a. Agregar Colaboradores al Repositorio
+Ve al repositorio en GitHub.
+Haz clic en la pestaña "Settings" (Configuración).
+En el menú lateral izquierdo, selecciona "Collaborators" (Colaboradores) o "Manage access".
+Haz clic en "Add People" (Agregar personas) e ingresa los nombres de usuario de GitHub de tus colaboradores.
+Asígnales permisos de "Write" o "Admin", según lo que necesiten hacer.
+b. Clonar el Repositorio en sus Computadoras
+Cada colaborador debe clonar el repositorio en su máquina local para empezar a trabajar:
+
+bash
+Copiar código
+git clone https://github.com/tu-usuario/tu-repositorio.git
+2. Flujo de Trabajo Básico en Equipo
+Aquí te presento un flujo común que cada miembro debe seguir al trabajar en equipo en GitHub:
+
+a. Crear una Nueva Rama para Cada Tarea o Funcionalidad
+Es recomendable que cada colaborador cree una nueva rama para trabajar en una tarea específica sin afectar la rama principal (main):
+
+bash
+Copiar código
+git checkout -b nombre-de-tu-rama
+Esto crea una nueva rama y cambia a esa rama.
+
+b. Realizar Cambios en la Nueva Rama
+Los cambios deben realizarse en la nueva rama creada. Cada vez que hagas cambios importantes:
+
+Añadir archivos al área de preparación:
+
+bash
+Copiar código
+git add archivo-modificado
+Hacer un commit para guardar los cambios:
+
+bash
+Copiar código
+git commit -m "Descripción de los cambios"
+c. Subir la Rama al Repositorio de GitHub
+Una vez que hayas terminado tus cambios en la rama, súbelos al repositorio remoto en GitHub:
+
+bash
+Copiar código
+git push origin nombre-de-tu-rama
+3. Crear una Pull Request (PR)
+Para fusionar tu rama con la rama principal (main):
+
+Ve al repositorio en GitHub.
+Haz clic en "Pull Requests".
+Haz clic en "New Pull Request".
+Elige la rama que quieres fusionar con main.
+Añade un comentario describiendo los cambios y envía la Pull Request.
+Otros miembros del equipo pueden revisar la Pull Request, añadir comentarios o aprobarla.
+Una vez aprobada, fusiona la Pull Request a la rama main.
+4. Mantén Actualizado tu Repositorio Local
+Antes de hacer cambios adicionales, asegúrate de tener la última versión de la rama main en tu máquina local:
+
+bash
+Copiar código
+git checkout main
+git pull origin main
+Si tienes cambios pendientes en tu rama:
+
+bash
+Copiar código
+git checkout nombre-de-tu-rama
+git merge main
+Esto te permitirá fusionar los cambios recientes en la rama main con tu rama actual para evitar conflictos.
+
+5. Resolver Conflictos de Forma Manual
+Si hay conflictos al fusionar ramas, Git te notificará los archivos afectados. Debes editarlos manualmente para resolver los conflictos y luego:
+
+Marca los conflictos resueltos:
+
+bash
+Copiar código
+git add archivo-resuelto
+Realiza un commit de los cambios:
+
+bash
+Copiar código
+git commit -m "Resuelto conflicto en archivo"
+Empuja la rama actualizada a GitHub.
+
+6. Buenas Prácticas para Trabajo en Equipo
+Hacer commits pequeños y frecuentes, con mensajes claros sobre los cambios.
+Mantener la rama main limpia y funcional.
+Crear una rama nueva para cada tarea o funcionalidad.
+Revisar Pull Requests antes de fusionarlas para mantener la calidad del código.
+Comunicación constante en el equipo sobre cambios importantes.
