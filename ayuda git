@@ -1,0 +1,85 @@
+1. Usa Archivos .pbix en GitHub
+Los informes de Power BI Desktop se guardan en archivos con extensión .pbix. Estos archivos son binarios, lo que significa que GitHub no 
+podrá realizar un seguimiento detallado de cambios línea por línea, pero aún así puedes almacenar diferentes versiones del archivo en tu repositorio de GitHub.
+
+2. Configura Git y GitHub
+Asegúrate de tener git instalado en tu computadora y un repositorio de GitHub creado para tu proyecto. Sigue estos pasos básicos:
+
+Configura Git en tu máquina (si aún no lo has hecho):
+
+bash
+Copiar código
+git config --global user.name "TuNombre"
+git config --global user.email "TuEmail@ejemplo.com"
+Clona el repositorio de GitHub en tu máquina local:
+
+bash
+Copiar código
+git clone https://github.com/tu-usuario/tu-repositorio.git
+3. Coloca el Archivo .pbix en el Repositorio
+Guarda tu archivo .pbix en la carpeta del repositorio que has clonado en tu máquina.
+
+4. Commits y Versionado
+Cada vez que hagas cambios en el archivo de Power BI, sigue estos pasos:
+
+Añade el archivo modificado al área de preparación (staging area):
+
+bash
+Copiar código
+git add nombre-de-tu-archivo.pbix
+Realiza un commit para guardar los cambios con un mensaje descriptivo:
+
+bash
+Copiar código
+git commit -m "Descripción de los cambios realizados"
+Sube los cambios al repositorio remoto en GitHub:
+
+bash
+Copiar código
+git push origin main
+(Cambia main por la rama en la que estés trabajando si no es la rama principal).
+
+5. Colaboración en Equipo
+Para que tu equipo pueda colaborar en el archivo de Power BI:
+
+Cada miembro del equipo clona el repositorio en sus máquinas locales.
+
+Antes de hacer cambios, asegúrate de obtener la versión más reciente del archivo .pbix desde GitHub:
+
+bash
+Copiar código
+git pull origin main
+Resuelve conflictos si varios miembros del equipo han realizado cambios en el archivo .pbix al mismo tiempo. Como el archivo es binario, 
+los conflictos se deben resolver manualmente, generalmente eligiendo la versión correcta del archivo para mantener.
+
+6. Historial y Versionado
+Aunque GitHub no puede mostrar diferencias detalladas en archivos .pbix, aún puedes usar Git para:
+
+Versionado: Guarda diferentes versiones del archivo .pbix.
+Comentarios de commit: Explica los cambios realizados en cada versión.
+Historial: Revertir a versiones anteriores si es necesario.
+7. Buen Práctica: Utiliza Nombres de Archivos Versionados
+Para evitar conflictos, es útil que cada colaborador trabaje en su propia copia del archivo .pbix y luego lo renombre con su nombre o con 
+la fecha (por ejemplo, reporte-v1.0.pbix, reporte-v1.1-carlos.pbix). Esto permitirá fusionar cambios fácilmente.
+
+8. Trabajo con Ramas (Opcional)
+Para trabajos en equipo más complejos, puedes usar ramas en Git:
+
+Crear una nueva rama para el trabajo en curso:
+
+bash
+Copiar código
+git checkout -b nombre-de-tu-rama
+Hacer cambios y subir la rama al repositorio:
+
+bash
+Copiar código
+git push origin nombre-de-tu-rama
+Crear una Pull Request en GitHub para fusionar cambios en la rama principal.
+
+Resumen
+Guardar archivos .pbix en GitHub para control de versiones.
+Realizar commits con descripciones claras cada vez que hagas cambios.
+Trabajar en equipo, descargando y subiendo cambios frecuentemente para evitar conflictos.
+Considerar ramas para trabajo paralelo si el equipo es grande.
+Si tienes dudas adicionales o necesitas un detalle más específico en alguno de los pasos, ¡házmelo saber!
