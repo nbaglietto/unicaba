@@ -1,0 +1,22 @@
+Tareas a Realizar
+
+Transformación de datos en Power Query: He revisado las tablas y hay trabajo pendiente, lo cual es positivo porque forma parte de los requisitos del trabajo práctico (TP).
+
+En la tabla: Export datos INBK.xlsx
+
+1.- Cambiar el nombre del archivo a uno más descriptivo, sugiero risk.xlsx y core.xlsx segun corresponda para mayor claridad.
+2.- Asignar nombres descriptivos a los encabezados.
+3.- Utilizando Power Query, dividir la columna PolicyDesc, ya que contiene datos en el formato "FC 300 304039". Separar "FC" y "LIPU" en una columna y el número de factura en otra. También es necesario normalizar el número, ya que en algunos casos contiene espacios en blanco.
+4-. En la columna Currency, cambiar la denominación a "moneda" y analizar la existencia de tres valores distintos: $, ARS y Dólar. Unificar los valores "$, ARS"  si corresponde; de lo contrario, clarificar qué representa cada uno.
+
+En la tabla: Export datos.xlsx
+5-. Aplicar los mismos cambios que en la tabla anterior.
+6-. Eliminar las columnas duplicadas: Carrier, TaskName, Client, entre otras.
+7-. Una vez normalizados los datos, debemos asegurarnos de que no existan duplicados (números de facturas y tareas) en las tablas. Luego, vincular las tablas mediante el número de factura, ya que este no debería repetirse entre las dos. 
+8-. Finalmente, crear una tercera tabla que muestre las facturas cargadas en ambos sistemas ("risk" y "core") esta 3er. tabla se crearia en powerbi al momento de crear las relaciones segun nos mostro el profesor en la ultima clase.
+
+Ayer estubimos chateando con Yanu sobre gran parte de esto.
+Voy a subir este texto a Drive para que todos lo tengan presente, ya que es parte de lo que se realizará y presentará en el TP.
+
+Saludos,
+Nahuel
